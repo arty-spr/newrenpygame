@@ -211,6 +211,7 @@ image mark reaching_down = "mark/mark_reaching_down.png"
 image mark eating_apple = "mark/mark_eating_apple.png"
 image mark defeated = "mark/mark_defeated.png"
 image mark waking = "mark/mark_waking.png"
+image mark hanging = "mark/mark_hanging.png"
 
 # Карпик
 image karpik smug = "karpik/karpik_smug.png"
@@ -448,7 +449,7 @@ label karpik_pushes:
     
     scene bg blue_island with fade
     
-    show mark scared at char_left with dissolve
+    show mark hanging at char_left with dissolve
     
     "Рука Марка в последний момент хватается за выступ!"
     
@@ -582,7 +583,7 @@ label after_karpik_deal:
     
     # В любом случае — фаербол
     
-    play sound explosion_sound volume 0.8
+    play sound explosion_sound volume 1
     
     scene bg center_island with flash
     
@@ -647,7 +648,7 @@ label after_karpik_deal:
     hide mark idle
     show mark scared at char_center with vpunch
     
-    play sound explosion_sound volume 0.8
+    play sound explosion_sound volume 1
     
     "Динамит падает рядом — ВЗРЫВ!"
     
@@ -724,7 +725,7 @@ label after_karpik_deal:
     
     # БОЙ
     
-    centered "{size=+5}БИТВА{/size}"
+    centered "{size=+10}БИТВА{/size}"
     
     show mark fighting at char_left with dissolve
     show mayakovsky battle at char_right with dissolve
